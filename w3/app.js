@@ -178,13 +178,12 @@ const showOnPage = function (text) {
 // cleanTime(true, true);
 
 
-function checkTime(time = 5) {
-    return time;
-    
+let timeOfDay = function randomTime(min = 1, max = 7) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-function cleanTime(tidy = false) {
-    let time = checkTime();
+let cleanDay = function cleanTime(tidy = false) {
+    let time = timeOfDay();
     showOnPage(time);
     if (tidy) {
         showOnPage('Relax');
@@ -193,14 +192,20 @@ function cleanTime(tidy = false) {
     } else {
         showOnPage('Clean Up');
     };
-    
+    return '';
 };
 
-cleanTime();
-showOnPage('<br>');
 
-cleanTime(true);
-showOnPage('<br>');
 
-checkTime(7);
-cleanTime();
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+showOnPage(cleanDay());
+
