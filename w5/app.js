@@ -80,14 +80,6 @@ const showOnPage = function (text) {
 // showOnPage(decision(cleanDay));
 
 
-const currentTime = function () {
-      const min = 1;
-      const max = 5;
-      let time = Math.floor(Math.random() * (max - min + 1)) + min;
-      return time;
-    };
-
-
 // let decision = function (clean) {
 //    if (clean.work === true && clean.isClean === false) {
 //        showOnPage(`${clean.currentTime()} O'clock leaves me plenty of time to clean. She's off at ${clean.timeOff}.`);
@@ -97,6 +89,16 @@ const currentTime = function () {
 //        showOnPage(`Place is clean, no worries.`);
 //    };
 // };
+
+
+
+const currentTime = function () {
+    const min = 1;
+    const max = 5;
+    let time = Math.floor(Math.random() * (max - min + 1)) + min;
+    return time;
+  };
+
 
 const factors = [
   { work: true, 
@@ -113,10 +115,11 @@ const factors = [
     timeOff: 6 },
 ];
 
-factors.forEach(currentTime(), decision = function (clean) {
-    if (clean.work === true && clean.isClean === false) {
-        showOnPage(`${clean.currentTime()} O'clock leaves me plenty of time to clean. She's off at ${clean.timeOff}.`);
-    } else if (clean.work === false && clean.isClean === false) {
+factors.forEach(function (factors) {
+    currentTime();
+    if (factors.work === true && factors.isClean === false) {
+        showOnPage(`${currentTime()} O'clock leaves me plenty of time to clean. She's off at ${factors.timeOff}.`);
+    } else if (factors.work === false && factors.isClean === false) {
         showOnPage(`I'm sorry, I'll get it done ASAP.`);
     } else {
         showOnPage(`Place is clean, no worries.`);
