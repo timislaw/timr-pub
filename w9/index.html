@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../uuidv4.js" defer></script>
+    <script src="app-functions.js" defer></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Make a suggestion</h1>
+    <h2>What film should I watch?</h2>
+    <p>Below is how long the film can be:</p>
+
+    <div id="beginning-info"></div>
+    <form id="add-film">
+        <label>Title Name: <input type="text" name="newFilm" required placeholder="Title" value="title"></label>
+        <label>Film length: <select name="filmLength">
+            <option value="one" >1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+        </select></label>
+        <!-- <label>Short Film? <input type="checkbox" name="shortFilm"> Check if yes.</label> -->
+        <button type="submit">Suggest</button>
+    </form>
+
+    <div id="output"></div>
+  </main>
+</body>
+</html>
+
+ 
