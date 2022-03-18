@@ -43,6 +43,7 @@ const movieHours = function () {
 const deleteButton = function (id) {
     const buttonDel = document.createElement('button');
     buttonDel.textContent = 'remove';
+    document.querySelector('#ouput').appendChild(buttonDel);
 
     buttonDel.addEventListener('click', function () {
         deletion(factors.id);
@@ -53,30 +54,6 @@ const deleteButton = function (id) {
 }
 
 
-// const createDOM = function (factor) {
-//     const factorDiv = document.createElement('div');
-//     const textEl = document.createElement('span');
-
-//     const button = document.createElement('button');
-//     //set up the remove note button
-//     button.textContent = 'x';
-//     noteEl.appendChild(button);
-//     button.addEventListener('click', function () {
-//       removeNote(note.id);
-//       saveNotes(notes)
-//       renderNotes(notes, filters);
-//     })
-
-//     //setup the note title text
-//     if (note.title.length > 0) {
-//       textEl.textContent = note.title;
-
-//     } else {
-//       textEl.textContent = 'unnamed note';
-//     };
-//     noteEl.appendChild(textEl)
-//     return noteEl;
-// };
 
 
   const renderFactors = function (factors) {
@@ -84,7 +61,7 @@ const deleteButton = function (id) {
 
       factors.forEach(function (factor) {
         const factorDiv = document.createElement('div');
-        const factorsTitle = document.createElement('span');
+        const factorsTitle = document.createElement('div');
         factorsTitle.textContent = `Watch the movie ${factor.title}, it is ${factor.hours} hour(s) long.`;
         document.querySelector('#output').appendChild(factorsTitle);
 
@@ -93,3 +70,8 @@ const deleteButton = function (id) {
 
   };
 
+
+
+  const lastEdited = function (timestamp) {
+    return `Edit: ${moment(timestamp.fromNow())}`;
+  };
