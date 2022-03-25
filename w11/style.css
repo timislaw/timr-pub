@@ -1,0 +1,16 @@
+html {
+    background-color: rgb(219, 136, 36);
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+main {
+    text-align: center;
+}
+
+button {
+    width: 57px;
+}
