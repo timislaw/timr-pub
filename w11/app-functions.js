@@ -6,9 +6,7 @@ let createSuggest = () => {
 
 
 //saving to local storage
-const saveSuggest = (factors) => {
-    localStorage.setItem('factors', JSON.stringify(factors));
-  };
+const saveSuggest = (factors) => localStorage.setItem('factors', JSON.stringify(factors));
 
 //remove the suggestion
 const deletion = (id) => {

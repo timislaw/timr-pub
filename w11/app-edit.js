@@ -13,6 +13,8 @@ if (!factor) {
 titleElement.value = factors.title;
 dateElement.textContent = lastEdited(factors.updatedAt);
 
+
+//anything with multiple lines of code I did not end up using shorthand arrow functions
 titleElement.addEventListener('input',  (e) => {
     factor.title = e.target.value;
     factor.updatedAt = moment().valueOf();
@@ -32,6 +34,7 @@ window.addEventListener('storage', (e) => {
         factors = JSON.parse(e.newValue)
         factor = factors.find((factors) => factors.id === factorId);
         
+        //couldn't refactor into ternary operator
         if (!factor) {
             location.assign('index.html');
         };
