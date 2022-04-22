@@ -1,0 +1,32 @@
+button{
+    background-color: yellow;
+    color:crimson;
+    border-radius: 45%;
+}
+html{
+    background-image: url('https://images.unsplash.com/photo-1625505826533-5c80aca7d157?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.order-form{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row;
+
+}
+
+.output-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;    
+
+}
+
