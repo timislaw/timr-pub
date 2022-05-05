@@ -1,0 +1,23 @@
+html {
+    background-color: hotpink;
+}
+
+h1, p, label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+.output-box {
+    display: flex;
+    background-color: yellow;
+    color: rgb(177, 101, 8);
+    border-radius: 5%;
+    
+}
